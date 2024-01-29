@@ -15,10 +15,16 @@ export class ReadComponent implements OnInit {
   userdata:any;
   
   ngOnInit(): void {
-    console.log("hii");
     this.api.getAllUser().subscribe( (res) => {
-      console.log(res);
+      // console.log(res);
       this.userdata=res;
+    });
+  }
+
+  deleteuser(id:any){
+    console.log(id);
+    this.api.deletedata(id).subscribe((res)=>{
+      console.log(res);
     });
   }
 } 

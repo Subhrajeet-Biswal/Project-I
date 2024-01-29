@@ -4,7 +4,7 @@ const {
   showusers,
   getuserbyid,
   postuser,
-  insertuser,
+  updateuser,
   deleteuser,
 } = require("../Controller/users.js");
 // import { showusers, getuserbyid, postuser, putuser, deleteuser } from "../container/users.js";
@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
 router.get("/users", showusers);
 router.get("/users/:id", getuserbyid);
 router.post("/users", postuser);
-router.put("/users/:id", insertuser);
+router.put("/users/:id", updateuser);
 router.delete("/users/:id", deleteuser);
 
 module.exports = router;

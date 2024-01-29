@@ -32,7 +32,7 @@ function postuser(req, res) {
   client.end;
 }
 
-function insertuser(req, res) {
+function updateuser(req, res) {
   client.query(updateQuery(req), (err, result) => {
     if (!err) {
       res.send("Update was successful");
@@ -53,4 +53,4 @@ function deleteuser(req, res) {
   });
   client.end;
 }
-module.exports = { showusers, getuserbyid, postuser, insertuser, deleteuser };
+module.exports = { showusers, getuserbyid, postuser, updateuser, deleteuser };
