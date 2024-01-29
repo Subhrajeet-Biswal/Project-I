@@ -26,5 +26,11 @@ export class ReadComponent implements OnInit {
     this.api.deletedata(id).subscribe((res)=>{
       console.log(res);
     });
+    this.userdata=this.userdata.filter((item:any)=>{
+      return item.id!=id;
+    })
+  }
+  updateUser(id:any){
+    console.log('hii');
   }
 } 

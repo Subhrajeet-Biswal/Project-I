@@ -7,6 +7,7 @@
         <th>Name</th>
         <th>Location</th>
         <th>Delete</th>
+        <th>Update</th>
       </tr>
     </thead>
     <tbody>
@@ -15,6 +16,7 @@
         <td>{{ item.firstname }} {{ item.lastname }}</td>
         <td>{{ item.location }}</td>
         <td><button (click)="deleteuser(item.id)">delete</button></td>
+        <td><button  (click)="updateUser(item.id)">Update</button></td>
       </tr>
       <!-- and so on... -->
     </tbody>

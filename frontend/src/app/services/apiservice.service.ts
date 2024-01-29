@@ -20,4 +20,7 @@ export class ApiserviceService {
 
     return this.http.delete(`${this.apiurl}/${id}`,{ responseType: 'text' });
   }
+  updateData(id:any,data:any):Observable<any>{
+    return this.http.post(`${this.apiurl}/${id}`,data,{ responseType: 'text' });
+  }
 }
