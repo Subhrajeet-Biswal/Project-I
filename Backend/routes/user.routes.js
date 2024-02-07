@@ -6,7 +6,7 @@ const {
   postuser,
   updateuser,
   deleteuser,
-} = require("../Controller/users.js");
+} = require("../Controller/users.controller.js");
 // import { showusers, getuserbyid, postuser, putuser, deleteuser } from "../container/users.js";
 // import { showusers,getuserbyid } from '../container/users.js';
 

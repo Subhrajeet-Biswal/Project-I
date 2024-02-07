@@ -1,11 +1,13 @@
 const client = require('./models/connection.js')
 const express = require('express');
-const userrouter = require('./routes/user.js');
+const userrouter = require('./routes/user.routes.js');
 const cors= require('cors')
+
+
 client.connect();
 const app = express();
 
-app.use(cors())
+app.use(cors());
 // app.use(express.json());
 app.use(userrouter);
 app.listen(3000, ()=>{
